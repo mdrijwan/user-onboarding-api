@@ -1,0 +1,27 @@
+service: ${self:provider.environment.SERVICE_NAME}-data
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ${opt:region, 'us-east-1'}
+  stage: ${opt:stage, 'dev'}
+  deploymentBucket:
+    name: mdrijwan-${self:provider.stage}-bucket
+  environment:
+    SERVICE_NAME: user-onboarding
+    DEPLOY_BUCKET: mdrijwan-${self:provider.environment.SERVICE_NAME}-api-${opt:stage, self:provider.stage}
+
+configValidationMode: warn
+
+resources:
+  Resources:
+    UserApiBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:provider.environment.DEPLOY_BUCKET}
+        AccessControl: Private
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true

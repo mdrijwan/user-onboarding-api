@@ -1,5 +1,27 @@
 ChangeLogs
 
+## [1.1.0](https://github.com/mdrijwan/user-onboarding-api/compare/v1.0.2...v1.1.0) (2024-02-18)
+
+
+### :sparkles: Features
+
+* adding handler functionalities ([6999632](https://github.com/mdrijwan/user-onboarding-api/commit/69996327af702f4525fb7e2e3730fd304090f47f))
+
+
+### :fast_forward: Performance
+
+* adding helper functions ([59ed452](https://github.com/mdrijwan/user-onboarding-api/commit/59ed45218e361df6903ff5eb049686b9b2b2f59c))
+
+
+### :dependabot: Build
+
+* adding config ([6ede9db](https://github.com/mdrijwan/user-onboarding-api/commit/6ede9db6389845a11cf62df93dfb059c2368bcfd))
+* adding data types ([8576134](https://github.com/mdrijwan/user-onboarding-api/commit/8576134be96070fd140afd530b8816daf9130dc2))
+* adding dto models ([a59a099](https://github.com/mdrijwan/user-onboarding-api/commit/a59a0993493eba8a4165a28c5ca4c556737e1894))
+* adding enums ([fa8a41e](https://github.com/mdrijwan/user-onboarding-api/commit/fa8a41e3c66ed060c3426efed6bccb664cdcffa3))
+* adding validators ([40b2e8d](https://github.com/mdrijwan/user-onboarding-api/commit/40b2e8d9b881e2dc62621a7e2b3c8597d5dc88ed))
+* adding vo models ([0525b3c](https://github.com/mdrijwan/user-onboarding-api/commit/0525b3c8413be8caba84c9186df840705b4bb7df))
+
 ## [1.0.2](https://github.com/mdrijwan/user-onboarding-api/compare/v1.0.1...v1.0.2) (2024-02-18)
 
 

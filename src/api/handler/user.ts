@@ -80,8 +80,6 @@ export const initiateAuth = async (event: { body: string }) => {
     ClientId: clientId,
   })
 
-  // return client.send(command)
-
   try {
     const result = await client.send(command)
     return formatResponse(StatusCode.SUCCESS, { success: result })

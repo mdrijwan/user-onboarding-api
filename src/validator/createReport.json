@@ -1,0 +1,33 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Create Report Schema",
+  "type": "object",
+  "required": ["car_id", "inspection_items", "name", "type", "service_category", "status"],
+  "properties": {
+    "car_id": {
+      "title": "Remarks",
+      "type": "string"
+    },
+    "inspection_items": {
+      "title": "Inspection Items",
+      "type": "object"
+    },
+    "name": {
+      "title": "Remarks",
+      "type": "string"
+    },
+    "type": {
+      "title": "Remarks",
+      "type": "string"
+    },
+    "service_category": {
+      "title": "Remarks",
+      "type": "string"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Update Report Schema",
+  "type": "object",
+  "required": ["status"],
+  "properties": {
+    "status": {
+      "title": "Status",
+      "type": "string"
+    },
+    "inspection_items": {
+      "title": "Inspection Items",
+      "type": "object"
+    },
+    "remarks": {
+      "title": "Remarks",
+      "type": "string"
+    }
+  }
+}

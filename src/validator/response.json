@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft-04/schema",
+  "title": "Order Details Schema",
+  "description": "The list of data that contains all order details",
+  "type": "object",
+  "required": [
+    "_id",
+    "prefer_shop",
+    "status",
+    "services",
+    "quotations",
+    "quotation_renew_count",
+    "model_version",
+    "order_by",
+    "order_type",
+    "prefer_date",
+    "car",
+    "created_at",
+    "updated_at",
+    "order_num",
+    "__v",
+    "is_refund_checked",
+    "region",
+    "currency"
+  ],
+  "properties": {
+    "_id": {
+      "title": "The _id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "prefer_shop": {
+      "title": "The prefer_shop Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "array",
+      "items": {
+        "title": "A Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "type": "string"
+      }
+    },
+    "status": {
+      "title": "The status Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "services": {
+      "title": "The services Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "array",
+      "items": {
+        "title": "A Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "type": "string"
+      }
+    },
+    "quotations": {
+      "title": "The quotations Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "array",
+      "items": {}
+    },
+    "quotation_renew_count": {
+      "title": "The quotation_renew_count Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "integer"
+    },
+    "model_version": {
+      "title": "The model_version Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "order_by": {
+      "title": "The order_by Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "object",
+      "required": [
+        "_id",
+        "email",
+        "firstname",
+        "lastname",
+        "mobile",
+        "contact_numbers"
+      ],
+      "properties": {
+        "_id": {
+          "title": "The _id Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "type": "string"
+        },
+        "email": {
+          "title": "The email Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "type": "string"
+        },
+        "firstname": {
+          "title": "The firstname Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "type": "string"
+        },
+        "lastname": {
+          "title": "The lastname Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "type": "string"
+        },
+        "mobile": {
+          "title": "The mobile Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "type": "string"
+        },
+        "contact_numbers": {
+          "title": "The contact_numbers Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "type": "object",
+          "required": ["hk"],
+          "properties": {
+            "hk": {
+              "title": "The hk Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "type": "object",
+              "required": ["country_code", "mobile"],
+              "properties": {
+                "country_code": {
+                  "title": "The country_code Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "type": "string"
+                },
+                "mobile": {
+                  "title": "The mobile Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "order_type": {
+      "title": "The order_type Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "prefer_date": {
+      "title": "The prefer_date Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "car": {
+      "title": "The car Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "null"
+    },
+    "created_at": {
+      "title": "The created_at Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "updated_at": {
+      "title": "The updated_at Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "order_num": {
+      "title": "The order_num Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "__v": {
+      "title": "The __v Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "integer"
+    },
+    "is_refund_checked": {
+      "title": "The is_refund_checked Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "boolean"
+    },
+    "region": {
+      "title": "The region Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    },
+    "currency": {
+      "title": "The currency Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "type": "string"
+    }
+  }
+}

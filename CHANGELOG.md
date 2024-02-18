@@ -1,5 +1,12 @@
 ChangeLogs
 
+## [1.1.7](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.6...v1.1.7) (2024-02-18)
+
+
+### :bug: Bug Fixes
+
+* **getuser:** fixing http status code got getUser function ([62bb363](https://github.com/mdrijwan/user-onboarding-api/commit/62bb363ab4f286b5d67731da36e49fdc5bae073c))
+
 ## [1.1.6](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.5...v1.1.6) (2024-02-18)
 
 

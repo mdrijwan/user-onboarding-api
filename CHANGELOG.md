@@ -1,5 +1,12 @@
 ChangeLogs
 
+## [1.1.5](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.4...v1.1.5) (2024-02-18)
+
+
+### :zap: Refactor
+
+* removing unnecessary comments from handler function ([016d9ba](https://github.com/mdrijwan/user-onboarding-api/commit/016d9ba260dcd22480bc2c7266c2bff80763b501))
+
 ## [1.1.4](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.3...v1.1.4) (2024-02-18)
 
 

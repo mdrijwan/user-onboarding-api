@@ -161,6 +161,7 @@ export const changePassword = async (event: { body: string }) => {
 export const getUser = async (event: { headers: { authorization: string } }) => {
   const bearerToken = event.headers.authorization
   const accessToken = bearerToken.replace('Bearer ', '')
+
   try {
     const command = new GetUserCommand({
       AccessToken: accessToken,
@@ -171,7 +172,7 @@ export const getUser = async (event: { headers: { authorization: string } }) => 
       userAttributes: response.UserAttributes,
     }
 
-    return formatResponse(StatusCode.ERROR, body)
+    return formatResponse(StatusCode.SUCCESS, body)
   } catch (error) {
     const body = {
       failure: error,

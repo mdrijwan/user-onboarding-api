@@ -6,10 +6,11 @@ on:
       - main
     paths:
       - 'src/**'
-      - serverless.yml
-    paths-ignore:
-      - 'src/config'
-      - 'src/validator'
+      - 'serverless.yml'
+      - '!src/config'
+      - '!src/validator'
+    # paths-ignore:
+    #   - 'src/config'
 
 jobs:
   deploy:

@@ -1,5 +1,12 @@
 ChangeLogs
 
+## [1.1.2](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.1...v1.1.2) (2024-02-18)
+
+
+### :fast_forward: Performance
+
+* upgrading deployment to node20 ([9324257](https://github.com/mdrijwan/user-onboarding-api/commit/93242579b5d034827bdcfd3f1a4386e3b29af3dd))
+
 ## [1.1.1](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.0...v1.1.1) (2024-02-18)
 
 

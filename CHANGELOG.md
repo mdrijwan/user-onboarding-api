@@ -1,5 +1,12 @@
 ChangeLogs
 
+## [1.1.1](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.0...v1.1.1) (2024-02-18)
+
+
+### :bug: Bug Fixes
+
+* fixing deployment config for ci ([06c19f4](https://github.com/mdrijwan/user-onboarding-api/commit/06c19f4d2db25a4bc404868a7ac07c6af5d3f55b))
+
 ## [1.1.0](https://github.com/mdrijwan/user-onboarding-api/compare/v1.0.2...v1.1.0) (2024-02-18)
 
 

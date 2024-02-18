@@ -17,7 +17,7 @@ To start the service locally:
 To deploy the service in AWS:
 `npm run deploy`
 
-To check the code linting:
+To check and fix the code linting:
 `npm run code-check`
 
 To commit the code:

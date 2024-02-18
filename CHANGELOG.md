@@ -1,5 +1,12 @@
 ChangeLogs
 
+## [1.1.6](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.5...v1.1.6) (2024-02-18)
+
+
+### :repeat: CI
+
+* updating deplyment script for ci ([428a2d9](https://github.com/mdrijwan/user-onboarding-api/commit/428a2d99bb8b17a7473e793afbfba856026baaca))
+
 ## [1.1.5](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.4...v1.1.5) (2024-02-18)
 
 

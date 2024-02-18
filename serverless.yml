@@ -1,0 +1,128 @@
+service: ${self:custom.serviceName}-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  timeout: 3
+  apiGateway:
+    description: An API service for user onboarding through cognito
+  deploymentBucket:
+    name: ${self:provider.environment.DEPLOY_BUCKET}
+  environment:
+    CLIENT: ${ssm:${self:provider.environment.SECRET_PARAM}/jwt}
+    SSM_PARAM: /${self:service}/${opt:stage, self:provider.stage}
+    SECRET_PARAM: /${self:custom.secret}/${opt:stage, self:provider.stage}
+    DEPLOY_BUCKET: mdrijwan-${self:custom.serviceName}-api-${opt:stage, self:provider.stage}
+  logs:
+    httpApi: true
+  httpApi:
+    metrics: true
+    cors: true
+    authorizers:
+      jwtAuthorizer:
+        identitySource: $request.header.Authorization
+        issuerUrl: https://cognito-idp.${self:provider.region}.amazonaws.com/${ssm:${self:custom.cognito}}
+
+        audience:
+          - ${ssm:${self:provider.environment.SECRET_PARAM}/jwt}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - ssm:GetParameter
+          Resource: [
+            "arn:aws:ssm:${self:provider.region}:${self:custom.account}:parameter${self:provider.environment.SSM_PARAM}",
+            "arn:aws:ssm:${self:provider.region}:${self:custom.account}:parameter${self:provider.environment.SECRET_PARAM}"
+            ]
+        - Effect: Allow
+          Action:
+            - cognito-idp:*
+          Resource: arn:aws:cognito-idp:${self:provider.region}:${self:custom.account}:userpool/${ssm:${self:custom.cognito}}
+
+frameworkVersion: '3'
+
+configValidationMode: warn
+
+custom:
+  account: ${aws:accountId}
+  serviceName: user-onboarding
+  secret: submission-portal-api
+  cognito: ${self:provider.environment.SECRET_PARAM}/cognito
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+functions:
+  signUp:
+    handler: src/api/handler/user.signUp
+    events:
+      - httpApi:
+          method: POST
+          path: /register
+  confirmSignUp:
+    handler: src/api/handler/user.confirmSignUp
+    events:
+      - httpApi:
+          method: POST
+          path: /confirm
+  initiateAuth:
+    handler: src/api/handler/user.initiateAuth
+    events:
+      - httpApi:
+          method: POST
+          path: /login
+  getToken:
+    handler: src/api/handler/user.getToken
+    events:
+      - httpApi:
+          method: POST
+          path: /token
+  resendConfirmationCode:
+    handler: src/api/handler/user.resendConfirmationCode
+    events:
+      - httpApi:
+          method: POST
+          path: /code
+  forgotPassword:
+    handler: src/api/handler/user.forgotPassword
+    events:
+      - httpApi:
+          method: POST
+          path: /forgotPassword
+  confirmForgotPassword:
+    handler: src/api/handler/user.confirmForgotPassword
+    events:
+      - httpApi:
+          method: POST
+          path: /confirmPassword
+  changePassword:
+    handler: src/api/handler/user.changePassword
+    events:
+      - httpApi:
+          method: POST
+          path: /changePassword
+  getUser:
+    handler: src/api/handler/user.getUser
+    events:
+      - httpApi:
+          method: GET
+          path: /get
+          authorizer:
+            name: jwtAuthorizer
+  listUsers:
+    handler: src/api/handler/user.listUsers
+    events:
+      - httpApi:
+          method: GET
+          path: /list
+  updateUser:
+    handler: src/api/handler/user.updateUser
+    events:
+      - httpApi:
+          method: POST
+          path: /update
+

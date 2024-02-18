@@ -1,5 +1,12 @@
 ChangeLogs
 
+## [1.1.4](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.3...v1.1.4) (2024-02-18)
+
+
+### :atom: Build
+
+* upgrading typescript config to node20 ([01d246c](https://github.com/mdrijwan/user-onboarding-api/commit/01d246c96bcba31f5587e3101f959d5cf70a71e9))
+
 ## [1.1.3](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.2...v1.1.3) (2024-02-18)
 
 

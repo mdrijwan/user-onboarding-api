@@ -46,6 +46,7 @@ export const signUp = async (event: { body: string }) => {
 
     return formatResponse(StatusCode.SUCCESS, body)
   } catch (error) {
+    console.error('ERROR:', error)
     const body = {
       failure: error,
     }

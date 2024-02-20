@@ -1,5 +1,12 @@
 ChangeLogs
 
+## [1.1.8](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.7...v1.1.8) (2024-02-20)
+
+
+### :dependabot: Build
+
+* **api:** logging api error to the console ([1c9cae1](https://github.com/mdrijwan/user-onboarding-api/commit/1c9cae1d560151674e677a1241a5d3c7adf24919))
+
 ## [1.1.7](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.6...v1.1.7) (2024-02-18)
 
 

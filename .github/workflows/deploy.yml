@@ -12,6 +12,21 @@ on:
       - '.github/workflows/deploy.yml'
     # paths-ignore:
     #   - 'src/config'
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'information'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      tags:
+        description: 'Deploy scenario'
+        required: false
+        type: boolean
 
 jobs:
   deploy:
@@ -27,7 +42,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - name: npm i -g serverless && npm i && serverless deploy
+      - name: serverless deploy
         uses: serverless/github-action@v3.2
         with:
           args: deploy

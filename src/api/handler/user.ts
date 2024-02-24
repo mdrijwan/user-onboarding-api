@@ -85,6 +85,8 @@ export const initiateAuth = async (event: { body: string }) => {
     const result = await client.send(command)
     return formatResponse(StatusCode.SUCCESS, { success: result })
   } catch (error) {
+    console.error('ERROR', error)
+
     return formatResponse(StatusCode.ERROR, { failure: error })
   }
 }

@@ -1,5 +1,12 @@
 ChangeLogs
 
+## [1.1.9](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.8...v1.1.9) (2024-02-24)
+
+
+### :atom: Build
+
+* **deploy:** adding manual trigger for deployment ([8ffb4dd](https://github.com/mdrijwan/user-onboarding-api/commit/8ffb4dd007bbd98c5b40c1be5aa287991c9cf19c))
+
 ## [1.1.8](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.7...v1.1.8) (2024-02-20)
 
 

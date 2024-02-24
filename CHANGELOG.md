@@ -1,5 +1,13 @@
 ChangeLogs
 
+## [1.1.10](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.9...v1.1.10) (2024-02-24)
+
+
+### :dependabot: Build
+
+* **api:** logging error for login failure ([712684f](https://github.com/mdrijwan/user-onboarding-api/commit/712684fb43880d2514f7827a945b59bb9c023ba6))
+* **sls:** changing port for local development ([9c6ac0b](https://github.com/mdrijwan/user-onboarding-api/commit/9c6ac0b1e6c0336e63676e07194dc20619fd5bb4))
+
 ## [1.1.9](https://github.com/mdrijwan/user-onboarding-api/compare/v1.1.8...v1.1.9) (2024-02-24)
 
 

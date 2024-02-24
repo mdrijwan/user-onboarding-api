@@ -51,6 +51,8 @@ custom:
   serviceName: user-onboarding
   secret: submission-portal-api
   cognito: ${self:provider.environment.SECRET_PARAM}/cognito
+  serverless-offline:
+    httpPort: 3001
 
 plugins:
   - serverless-plugin-typescript
